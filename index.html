@@ -10,16 +10,18 @@
 <body>
     <h1>Library</h1>
     <button class="add-book">New Book</button>
+    <div id="card-holder"></div>
     <div class="popup-form">
-        <form action="" class="form-container">
+        <form action="" id="form-container">
             <h2> New Book</h2>
-            <input type="text" placeholder="Title" required>
-            <input type="text" placeholder="Author">
-            <input type="text" placeholder="Pages">
+            <input type="text" placeholder="Title" id="title" required>
+            <input type="text" placeholder="Author" id="author">
+            <input type="text" placeholder="Pages" id="pages">
             <div>
                 <label for="read">Read</label>
-                <input type="checkbox" name="read">
+                <input type="checkbox" name="read" id="read">
             </div>
+            <button id="submit-btn">Add Book</button>
         </form>
     </div>
 
