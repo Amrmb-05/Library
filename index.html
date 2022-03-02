@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1>Library</h1>
-    <button class="add-book">New Book</button>
+    <button class="add-book" onclick="openForm()">New Book</button>
     <div id="card-holder"></div>
     <div class="popup-form">
         <form action="" id="form-container">
@@ -21,7 +21,7 @@
                 <label for="read">Read</label>
                 <input type="checkbox" name="read" id="read">
             </div>
-            <button id="submit-btn">Add Book</button>
+            <button id="submit-btn" onclick="closeForm()">Add Book</button>
         </form>
     </div>
 
