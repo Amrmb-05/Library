@@ -8,23 +8,25 @@
     <title>Library</title>
 </head>
 <body>
+    <div class="header">
     <h1>Library</h1>
     <button class="add-book" onclick="openForm()">New Book</button>
-    <div id="card-holder"></div>
+    </div>
+
     <div class="popup-form">
         <form action="" id="form-container">
             <h2> New Book</h2>
             <input type="text" placeholder="Title" id="title" required>
-            <input type="text" placeholder="Author" id="author">
-            <input type="text" placeholder="Pages" id="pages">
+            <input type="text" placeholder="Author" id="author" required>
+            <input type="tel" placeholder="Pages" id="pages" required>
             <div>
                 <label for="read">Read</label>
-                <input type="checkbox" name="read" id="read">
+                <input type="checkbox" name="read" id="read" required>
             </div>
             <button id="submit-btn" onclick="closeForm()">Add Book</button>
         </form>
     </div>
-
+    <div id="card-holder"></div>
     <script src="script/script.js"></script>
 </body>
 </html>

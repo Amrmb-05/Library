@@ -35,9 +35,7 @@ const container = document.getElementById('card-holder');
 
 function addBookCard(ev) {
     
-    
     myLibrary.forEach(book => {
-    
     console.log(book)
     let card = document.createElement('div');
     card.classList = 'card-body';
@@ -48,6 +46,7 @@ function addBookCard(ev) {
     else {
       book.read = "Not Read"
     }
+
 
     const content = `
     <div class="card-body" data-index="${myLibrary.indexOf(book)}">
@@ -60,19 +59,36 @@ function addBookCard(ev) {
     
     container.innerHTML += content;
 
+    document.querySelectorAll('.change-status').forEach(elem => {
+        
+        if(elem.textContent === "Read") {
+          elem.style.background = 'green'
+        }
+        else {
+          elem.style.background = 'red'
+        }
+      })
+
+
+
+
     document.querySelectorAll('.change-status').forEach(elem => {elem.addEventListener(
       'click', () => {
         
         if(book.read === "Read") {
+
           book.read = "Not Read"
           elem.textContent = "Not Read"
+          elem.style.background = 'red'
         }
         else {
           book.read = "Read"
           elem.textContent = "Read"
+          elem.style.background = 'green'
         }
       })})
 
+      
 
     myLibrary = []
     document.querySelectorAll('.remove-book-btn').forEach(btn => {btn.addEventListener('click',() => {
